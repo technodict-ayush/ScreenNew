@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ScreenNew.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 136px;
+            height: 52px;
+        }
+        .auto-style8 {
+            width: 100%;
+            height: 59px;
+        }
+/*-- --*/
+.column {
+    float: left;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 23%;
+}
+
+.right {
+  width: 75%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/**/
+        .auto-style9 {
+            height: 52px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--<div style="background-color: #FFFFFF" class="auto-style7">
+
+        </div>--%>
+        
+            <table border="0" class="auto-style8">
+                <tr>
+                    <td class="auto-style1" style="background-color: navy">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="background-color: navy" class="auto-style9"><%--&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;--%>
+                        </td>
+                </tr>
+                <%--<%--<tr>
+                    <td style="background-color: #FFFFFF">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <%--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;--%></td>
+                   <%-- <td style="background-color: #FFFFFF">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+    
+                </td>
+                </tr>--%>
+                </table>
+<%--  --%>
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+  </div>
+  <div class="column right" style="background-color:#bbb;">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+  </div>
+</div>
+<%--  --%>
+    </form>
+</body>
+</html>
